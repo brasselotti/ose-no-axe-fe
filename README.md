@@ -80,6 +80,18 @@ NICE-03 // Movimentação financeira
 Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para atualizar o extrato financeiro.
 
 ## Mapa do site
+├── /cadastro                          # pública
+├── /login                             # pública
+├── /app                               # protegida - requer login
+├── /app/home                          # dashboard
+├── /app/cadastros                     # 
+    ├── app/cadastros/novo             # somente para ADMs
+    ├── app/cadastros/editar           # para todos os users
+├── /app/mensalidades                  # 
+    ├── app/mensalidades/list          # dashboard para ADMs
+    └── app/mensalidades/list/:id      # dinâmica
+    ├── app/mensalidades/registrar     # para todos os users
+    ├── app/mensalidades/analisar      # somente para ADMs
 
 ## Wireframes
 
