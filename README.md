@@ -27,7 +27,7 @@ Não pretendemos tornar o "Osé no Axé" em uma rede social, onde os membros int
 ## Público-alvo & Personas
 O "Osé no Axé" foi pensado para a utilização na comunidade de membros de terreiros de candomblé. Será importante a distinção entre dois tipos de "perfil", um para administradores, que possam acessar todas as informações a respeito dos membros cadastrados, e o segundo tipo para membros simples, onde será possível atualizar suas informações pessoais no cadastro e também solicitar o registro de seu pagamento de mensalidade, através da inclusão de um comprovante.
 
-Essas demandas se fazem importantes para que haja uma fidelidade quanto aos dados dos membros, para assim se tornar possível um melhor conhecimento das pessoas que frequentam a casa, e para acabar com o retrabalho atual no contexto em que a atualização da situação de regularidade de pagamentos é feito através de grupos do whatsapp, repassando listas repetidamente sea cada vez em que um membro realiza o pagamento.
+Essas demandas se fazem importantes para que haja uma fidelidade quanto aos dados dos membros, para assim se tornar possível um melhor conhecimento das pessoas que frequentam a casa, e para acabar com o retrabalho atual no contexto em que a atualização da situação de regularidade de pagamentos é feito através de grupos do whatsapp, repassando listas repetidamente a cada vez em que um membro realiza o pagamento.
 
 ## Listagem de funcionalidades
 MUST-01 // Cadastro
@@ -80,18 +80,18 @@ NICE-03 // Movimentação financeira
 Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para atualizar o extrato financeiro.
 
 ## Mapa do site
-├── /cadastro                        # pública
-├── /login                           # pública
-├── /app                             # protegida - requer login
-├── /app/home                        # dashboard
-├── /app/cadastros                   # 
-  ├── app/cadastros/novo             # somente para ADMs
-  ├── app/cadastros/editar           # para todos os users
-├── /app/mensalidades                # 
-  ├── app/mensalidades/list          # dashboard para ADMs
-  └── app/mensalidades/list/:id      # dinâmica
-  ├── app/mensalidades/registrar     # para todos os users
-  ├── app/mensalidades/analisar      # somente para ADMs
+├── /cadastro                        # pública  
+├── /login                           # pública  
+├── /app                             # protegida - requer login  
+├── /app/home                        # dashboard  
+├── /app/cadastros                   #   
+  ├── app/cadastros/novo             # somente para ADMs  
+  ├── app/cadastros/editar           # para todos os users  
+├── /app/mensalidades                #  
+  ├── app/mensalidades/list          # dashboard para ADMs  
+  └── app/mensalidades/list/:id      # dinâmica  
+  ├── app/mensalidades/registrar     # para todos os users  
+  ├── app/mensalidades/analisar      # somente para ADMs  
 
 ## Wireframes
 ![Home page](/images/app-home.png)
