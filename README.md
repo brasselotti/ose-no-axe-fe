@@ -94,6 +94,9 @@ Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para 
     ├── app/mensalidades/analisar      # somente para ADMs
 
 ## Wireframes
+![Home page](/images/app-home.png)
+![Cadastros](/images/app-cadastros.png)
+![Registrar pagamento](/images/app-mensalidades-registrar.png)
 
 ## Slack técnica
 
