@@ -30,6 +30,54 @@ O "Osé no Axé" foi pensado para a utilização na comunidade de membros de ter
 Essas demandas se fazem importantes para que haja uma fidelidade quanto aos dados dos membros, para assim se tornar possível um melhor conhecimento das pessoas que frequentam a casa, e para acabar com o retrabalho atual no contexto em que a atualização da situação de regularidade de pagamentos é feito através de grupos do whatsapp, repassando listas repetidamente sea cada vez em que um membro realiza o pagamento.
 
 ## Listagem de funcionalidades
+MUST-01 // Cadastro
+Como filho da casa, quero me registrar no banco de dados da casa para salvar os meus dados.
+-> Critérios de aceitação:
+  - Validação de CPF (Um cadastro por pessoa);
+  - Validação de login (Não repetir login de outros membros);
+  - Data de bori (Somente se torna filho após o bori);
+  - Redireciona para /home após sucesso;
+
+MUST-02 // Edição de cadastro
+Como filho da casa, quero atualizar os dados do meu cadastro de forma a mantê-los atualizados.
+-> Critérios de aceitação:
+  - Precisa estar logado;
+  - Para salvar, precisa confirmar com senha;
+
+MUST-03 // Registro de pagamento de mensalidade
+Como filho da casa, quero solicitar a baixa no pagamento mensal, para constar a regularidade.
+-> Critérios de aceitação:
+  - Precisa estar logado;
+  - Precisa enviar um comprovante (em imagem ou PDF);
+  - Será aceito mediante avaliação de um ADM;
+  - Para confirmar, solicita-se a senha;
+
+MUST-04 // Listagem de regularidade dos membros
+Como ADM, quero visualizar a situação dos filhos para poder estimar o valor pendente a receber no mês.
+-> Critérios de aceitação:
+  - Funcionalidade disponível apenas para cadastros do tipo ADM;
+  - Dashboard para visualização mediante filtros de pesquisa;
+
+MUST-05 // Avaliação de pagamentos
+Como ADM, quero dar baixa na solicitação de pagamento de um filho, para garantir que o relatório de situação esteja atualizado.
+-> Critérios de aceitação:
+  - Funcionalidade disponível apenas para cadastros do tipo ADM;
+  - Possibilidade de decisão mediante visualização ou não do comprovante enviado;
+
+MUST-06 // Alteração no tipo de perfil 
+Como ADM, quero alterar o tipo de conta de um membro, para alguém possa acessar ou deixar de ter acesso à funcionalidades do sistema.
+-> Critérios de aceitação:
+  - Funcionalidade disponível apenas para cadastros do tipo ADM;
+  - Notificação para confirmação da ação ao tentar salvar;
+
+NICE-01 // Notificação de situação
+Como filho da casa, serei notificado em caso de pendência financeira mensal, para que esteja ciente e possa quitar a dívida.
+
+NICE-02 // Extrato financeiro
+Como filho da casa ou ADM, quero acessar à um extrato de movimentações, para ter clareza sobre o destino dos valores de mensalidade pagos.
+
+NICE-03 // Movimentação financeira
+Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para atualizar o extrato financeiro.
 
 ## Mapa do site
 
