@@ -80,18 +80,18 @@ NICE-03 // Movimentação financeira
 Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para atualizar o extrato financeiro.
 
 ## Mapa do site
-├── /cadastro                          # pública
-├── /login                             # pública
-├── /app                               # protegida - requer login
-├── /app/home                          # dashboard
-├── /app/cadastros                     # 
-    ├── app/cadastros/novo             # somente para ADMs
-    ├── app/cadastros/editar           # para todos os users
-├── /app/mensalidades                  # 
-    ├── app/mensalidades/list          # dashboard para ADMs
-    └── app/mensalidades/list/:id      # dinâmica
-    ├── app/mensalidades/registrar     # para todos os users
-    ├── app/mensalidades/analisar      # somente para ADMs
+├── /cadastro                        # pública
+├── /login                           # pública
+├── /app                             # protegida - requer login
+├── /app/home                        # dashboard
+├── /app/cadastros                   # 
+  ├── app/cadastros/novo             # somente para ADMs
+  ├── app/cadastros/editar           # para todos os users
+├── /app/mensalidades                # 
+  ├── app/mensalidades/list          # dashboard para ADMs
+  └── app/mensalidades/list/:id      # dinâmica
+  ├── app/mensalidades/registrar     # para todos os users
+  ├── app/mensalidades/analisar      # somente para ADMs
 
 ## Wireframes
 ![Home page](/images/app-home.png)
@@ -99,9 +99,33 @@ Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para 
 ![Registrar pagamento](/images/app-mensalidades-registrar.png)
 
 ## Slack técnica
+1. React
+2. GitHub
+3. JavaScript
+4. CSS
+5. Vite
 
 ## Fontes de dados
+Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos serão alocados em um arquivo JSON local.
 
 ## Riscos e atenções
 
 ## Cronograma pessoal
+25/05/2026
+- Criação de repositório no GitHub;
+- Início do documento para entrega;
+- Branch "roteiro" criada;
+- Adequação de textos pré-existentes (projeto de disciplina "Programação Avançada"):
+  - Descrição geral;
+  - Público-alvo & personas;
+- Sumário criado em arquivo README.md;
+---
+26/06/2026
+- Desenvolvimento dos tópicos à serem entregues:
+  - Listagem de funcionalidades;
+  - Mapa do site;
+  - Criação de wireframes no Figma;
+  - Slack técnica;
+  - Fonte de dados;
+  - Cronograma pessoal;
+- Conteúdos do roteiro adicionados e commitados;
