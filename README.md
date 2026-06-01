@@ -115,6 +115,10 @@ Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para 
 Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos serão alocados em um arquivo JSON local.
 
 ## Riscos e atenções
+- O sistema não fará uma validação de dados, portanto é importante que no momento de cadastro, o membro se certifique sobre os dados cadastrados;
+- Para que os relatórios se mantenham fiéis, é importante que os ADM's verifiquem constantemente as solicitações de pagamento de mensalidades;
+- Para o acesso à alguns dados específicos dos membros, os ADM's precisam passar por uma validação através de senha;
+- Os membros comuns cadastrados não podem ter acesso à informações pessoais dos demais membros;
 
 ## Cronograma pessoal
 25/05/2026
