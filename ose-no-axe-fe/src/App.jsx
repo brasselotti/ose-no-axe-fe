@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
+import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Cadastros from './apps/cadastros/pages'
@@ -11,29 +12,32 @@ import List from './apps/mensalidades/pages/list'
 import Detail from './apps/mensalidades/pages/list/Detail'
 
 function ProtectedRoute() {
-  return <Outlet />
+  const { usuario } = useAuth()
+  return usuario ? <Outlet /> : <Navigate to="/login" replace />
 }
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/cadastro" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/app" element={<ProtectedRoute />}>
-          <Route path="home" element={<Home />} />
-          <Route path="cadastros" element={<Cadastros />} />
-          <Route path="cadastros/novo" element={<Novo />} />
-          <Route path="cadastros/editar" element={<Editar />} />
-          <Route path="mensalidades" element={<Mensalidades />} />
-          <Route path="mensalidades/registrar" element={<Registrar />} />
-          <Route path="mensalidades/analisar" element={<Analisar />} />
-          <Route path="mensalidades/list" element={<List />} />
-          <Route path="mensalidades/list/:id" element={<Detail />} />
-        </Route>
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/cadastro" element={<Navigate to="/login" replace />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/app" element={<ProtectedRoute />}>
+            <Route path="home" element={<Home />} />
+            <Route path="cadastros" element={<Cadastros />} />
+            <Route path="cadastros/novo" element={<Novo />} />
+            <Route path="cadastros/editar" element={<Editar />} />
+            <Route path="mensalidades" element={<Mensalidades />} />
+            <Route path="mensalidades/registrar" element={<Registrar />} />
+            <Route path="mensalidades/analisar" element={<Analisar />} />
+            <Route path="mensalidades/list" element={<List />} />
+            <Route path="mensalidades/list/:id" element={<Detail />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
 
