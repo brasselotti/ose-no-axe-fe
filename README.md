@@ -144,3 +144,6 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
 - Criação de nova branch develop;
 - Utilização de Claude Code para guiar a criação do projeto;
   - Criação de reset.css;
+  - Sugestão para melhorar estrutura de pastas e Apps;
+  - Instalação e configuração do React Router;
+  - Lógica de login e autenticação;
