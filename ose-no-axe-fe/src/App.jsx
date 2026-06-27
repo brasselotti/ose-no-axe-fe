@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
-import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Cadastros from './apps/cadastros/pages'
@@ -19,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastro" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/app" element={<ProtectedRoute />}>
           <Route path="home" element={<Home />} />
