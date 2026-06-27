@@ -130,7 +130,7 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
   - Público-alvo & personas;
 - Sumário criado em arquivo README.md;
 ---
-26/06/2026
+26/05/2026
 - Desenvolvimento dos tópicos à serem entregues:
   - Listagem de funcionalidades;
   - Mapa do site;
@@ -139,3 +139,9 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
   - Fonte de dados;
   - Cronograma pessoal;
 - Conteúdos do roteiro adicionados e commitados;
+---
+27/06/2026
+- Criação de nova branch develop;
+- Utilização de Claude Code para guiar a criação do projeto;
+  - Criação de reset.css;
+  - Sugestão de pastas e arquivos padrão do vite para excluir;
