@@ -82,18 +82,18 @@ Como ADM, quero registrar uma movimentação de entrada ou saída de caixa para 
 
 ## Mapa do site
 ```text
-├── /cadastro                        # pública  
-├── /login                           # pública  
-├── /app                             # protegida - requer login  
-├── /app/home                        # dashboard  
-├── /app/cadastros                   #   
-│  ├── app/cadastros/novo            # somente para ADMs  
-│  ├── app/cadastros/editar          # para todos os users  
-├── /app/mensalidades                #  
-│  ├── app/mensalidades/registrar    # para todos os users  
-│  ├── app/mensalidades/analisar     # somente para ADMs  
-│  ├── app/mensalidades/list         # dashboard para ADMs  
-│  └── app/mensalidades/list/:id     # dinâmica  
+├── /cadastro                              # pública
+├── /login                                 # pública
+└── /app                                   # protegida - requer login
+   ├── /app/home                           # dashboard
+   ├── /app/cadastros                      # app de cadastros
+   │  ├── /app/cadastros/novo              # somente para ADMs
+   │  └── /app/cadastros/editar            # para todos os users
+   └── /app/mensalidades                   # app de mensalidades
+      ├── /app/mensalidades/registrar      # para todos os users
+      ├── /app/mensalidades/analisar       # somente para ADMs
+      └── /app/mensalidades/list           # dashboard para ADMs
+         └── /app/mensalidades/list/:id    # dinâmica
 ```
 
 ## Wireframes
@@ -144,4 +144,3 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
 - Criação de nova branch develop;
 - Utilização de Claude Code para guiar a criação do projeto;
   - Criação de reset.css;
-  - Sugestão de pastas e arquivos padrão do vite para excluir;

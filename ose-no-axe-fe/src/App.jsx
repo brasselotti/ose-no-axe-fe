@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>OSE NO AXE</h1>
+      <h1>OSÉ NO AXÉ</h1>
     </div>
   )
 }
