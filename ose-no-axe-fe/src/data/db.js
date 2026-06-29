@@ -26,3 +26,35 @@ export function salvarUsuario(usuario) {
   db.usuarios.push(usuario)
   saveDB(db)
 }
+
+export function listarUsuarios() {
+  return getDB().usuarios
+}
+
+export function buscarUsuarioPorLogin(login) {
+  return getDB().usuarios.find(u => u.login === login) ?? null
+}
+
+export function atualizarUsuario(login, dados) {
+  const db = getDB()
+  const idx = db.usuarios.findIndex(u => u.login === login)
+  if (idx === -1) return false
+  db.usuarios[idx] = { ...db.usuarios[idx], ...dados }
+  saveDB(db)
+  return true
+}
+
+export function initDB() {
+  const db = getDB()
+  if (db.usuarios.length === 0) {
+    db.usuarios.push({
+      nome: 'Administrador',
+      cpf: '00000000000',
+      login: 'adm',
+      dataBori: '',
+      senha: 'adm123',
+      tipo: 'adm',
+    })
+    saveDB(db)
+  }
+}
