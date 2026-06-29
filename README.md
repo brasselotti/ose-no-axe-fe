@@ -146,4 +146,15 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
   - Criação de reset.css;
   - Sugestão para melhorar estrutura de pastas e Apps;
   - Instalação e configuração do React Router;
-  - Lógica de login e autenticação;
+  - Lógica de login e autenticação (MUST-01);
+---
+29/06/2026
+- Utilização do Claude Code para criar cronograma de 3 dias de trabalho;  
+- Dia 1 (layout e app de cadastros):  
+  - Criação da sidebar e layout das páginas do app (Navbar, Layout);  
+  - Integração do layout e proteção de rotas por perfil (AdminRoute);  
+  - Seed do banco de dados com usuário ADM padrão;  
+  - Adição de funções de leitura e atualização no banco de dados;  
+  - Implementação do dashboard na homepage (atalhos e visão geral);  
+  - Implementação do app de cadastros: listagem de membros, novo cadastro e edição de cadastro (MUST-02, MUST-06);  
+---
