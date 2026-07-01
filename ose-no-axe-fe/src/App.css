@@ -50,6 +50,22 @@
   color: var(--color-white);
 }
 
+.btn-danger {
+  padding: 0.625rem 1.25rem;
+  background-color: #dc2626;
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
 .btn-link {
   background: none;
   border: none;
@@ -184,4 +200,202 @@
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.5rem;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 1.5rem;
+}
+
+/* Seções de formulário */
+.form-section {
+  background-color: var(--color-white);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.form-section-header {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-section-body {
+  padding: 1.25rem 1.25rem 0.25rem;
+}
+
+/* Input com botão inline (ex: show/hide senha) */
+.form-input-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.form-input-group:focus-within {
+  border-color: var(--color-green-medium);
+}
+
+.form-input-group input {
+  flex: 1;
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background: transparent;
+}
+
+.form-input-group-btn {
+  background: none;
+  border: none;
+  padding: 0 0.75rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-group-btn:hover {
+  color: var(--color-text);
+}
+
+/* Checkbox inline dentro de form-field */
+.form-field--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.form-field--checkbox input[type="checkbox"] {
+  width: auto;
+  border: none;
+  padding: 0;
+  accent-color: var(--color-green-dark);
+  cursor: pointer;
+}
+
+.form-field--checkbox label {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.confirmar-pagamento {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-color: var(--color-cream);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.confirmar-pagamento-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.confirmar-pagamento-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Badges de status de mensalidade */
+.badge--pendente {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge--aprovado {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge--rejeitado {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Cards de navegação */
+.nav-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: var(--color-text);
+  min-width: 180px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.nav-card:hover {
+  border-color: var(--color-green-medium);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nav-card-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-green-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-card-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.nav-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 10px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 0.4rem;
 }
