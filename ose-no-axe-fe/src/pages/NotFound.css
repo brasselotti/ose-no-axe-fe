@@ -1,0 +1,55 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cream);
+}
+
+.not-found-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 90%;
+}
+
+.not-found-code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  line-height: 1;
+}
+
+.not-found-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.not-found-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.not-found-btn {
+  margin-top: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.not-found-btn:hover {
+  background-color: var(--color-green-medium);
+}

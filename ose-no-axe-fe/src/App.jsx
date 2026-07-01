@@ -3,6 +3,7 @@ import './App.css'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Layout from './components/Layout'
 import Login from './pages/Login'
+import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 import Perfil from './pages/Perfil'
 import Cadastros from './apps/cadastros/pages'
@@ -47,7 +48,7 @@ function App() {
               </Route>
             </Route>
           </Route>
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
