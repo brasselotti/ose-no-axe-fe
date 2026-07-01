@@ -1,0 +1,87 @@
+.mensalidades-historico {
+  margin-top: 2rem;
+}
+
+.mensalidades-historico-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mensalidades-historico-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.mensalidades-filtros {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.mensalidades-filtros select {
+  padding: 0.45rem 0.875rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.mensalidades-filtros select:focus {
+  outline: none;
+  border-color: var(--color-green-medium);
+}
+
+.historico-comprovante-link {
+  font-size: 0.8rem;
+  color: var(--color-terracotta);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.historico-comprovante-link:hover {
+  color: var(--color-brown);
+}
+
+.historico-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.historico-modal {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 520px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historico-modal img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.historico-modal-fechar {
+  align-self: flex-end;
+}
