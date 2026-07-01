@@ -172,3 +172,10 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
 ---
 01/07/2026
 - Utilização de Claude Code para organizar commits do dia anterior;
+- Dia 3 (estilos, revisão e melhorias):
+  - Refatoração dos formulários de cadastro (Novo, Editar, Perfil) em componente compartilhado com layout em seções;
+  - Adição de função de exclusão de membro e botão de exclusão com confirmação na página de edição;
+  - Atualização do layout da página de registrar mensalidade para padrão de seções;
+  - Adição de histórico de pagamentos com filtros por mês, membro e status na página inicial de mensalidades;
+  - Dashboard da homepage conectado ao banco de dados, exibindo adimplência do mês atual;
+---
