@@ -40,10 +40,13 @@ function Navbar() {
       </ul>
 
       <div className="navbar-footer">
-        <div className="navbar-user">
+        <NavLink
+          to="/app/perfil"
+          className={({ isActive }) => 'navbar-user' + (isActive ? ' navbar-user--ativo' : '')}
+        >
           <span className="navbar-nome">{usuario?.nome}</span>
           <span className={`navbar-tipo navbar-tipo--${usuario?.tipo}`}>{usuario?.tipo}</span>
-        </div>
+        </NavLink>
         <button className="navbar-sair" onClick={handleSair}>Sair</button>
       </div>
     </nav>

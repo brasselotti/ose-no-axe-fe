@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Layout from './components/Layout'
 import Login from './pages/Login'
 import Home from './pages/Home'
+import Perfil from './pages/Perfil'
 import Cadastros from './apps/cadastros/pages'
 import Novo from './apps/cadastros/pages/Novo'
 import Editar from './apps/cadastros/pages/Editar'
@@ -33,6 +34,7 @@ function App() {
           <Route path="/app" element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route path="home" element={<Home />} />
+              <Route path="perfil" element={<Perfil />} />
               <Route path="mensalidades" element={<Mensalidades />} />
               <Route path="mensalidades/registrar" element={<Registrar />} />
               <Route path="mensalidades/analisar" element={<Analisar />} />
