@@ -1,15 +1,28 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { listarUsuarios } from '../data/db'
+import { listarUsuarios, listarMensalidades } from '../data/db'
 import './Home.css'
 
 function Home() {
   const { usuario } = useAuth()
   const primeiroNome = usuario?.nome?.split(' ')[0]
 
-  const usuarios = listarUsuarios()
+  const usuarios     = listarUsuarios()
+  const mensalidades = listarMensalidades()
   const totalMembros = usuarios.filter(u => u.tipo === 'membro').length
-  const totalAdms = usuarios.filter(u => u.tipo === 'adm').length
+  const totalAdms    = usuarios.filter(u => u.tipo === 'adm').length
+
+  const hoje     = new Date()
+  const mesAtual = `${hoje.getFullYear()}-${String(hoje.getMonth() + 1).padStart(2, '0')}`
+
+  const loginsPagos = new Set(
+    mensalidades
+      .filter(m => (m.status === 'aprovado' || m.status === 'pendente') && m.referencia === mesAtual)
+      .map(m => m.membroLogin)
+  )
+  const emDia       = usuarios.filter(u => loginsPagos.has(u.login)).length
+  const pendentes   = mensalidades.filter(m => m.status === 'pendente' && m.referencia === mesAtual).length
+  const inadimplentes = usuarios.length - emDia
 
   return (
     <div className="home">
@@ -57,19 +70,21 @@ function Home() {
             </div>
           )}
           <div className="dashboard-panel">
-            <h3 className="dashboard-panel-title">Mensalidades</h3>
+            <h3 className="dashboard-panel-title">
+              Mensalidades — {hoje.toLocaleString('pt-BR', { month: 'long', year: 'numeric' }).replace(/^\w/, c => c.toUpperCase())}
+            </h3>
             <div className="dashboard-stats">
               <div className="dashboard-stat">
-                <span className="dashboard-stat-value">—</span>
+                <span className="dashboard-stat-value" style={{ color: '#065f46' }}>{emDia}</span>
                 <span className="dashboard-stat-label">Em dia</span>
               </div>
               <div className="dashboard-stat">
-                <span className="dashboard-stat-value">—</span>
-                <span className="dashboard-stat-label">Pendentes</span>
+                <span className="dashboard-stat-value" style={{ color: '#b45309' }}>{pendentes}</span>
+                <span className="dashboard-stat-label">Aguardando análise</span>
               </div>
               <div className="dashboard-stat">
-                <span className="dashboard-stat-value">—</span>
-                <span className="dashboard-stat-label">Em atraso</span>
+                <span className="dashboard-stat-value" style={{ color: '#b91c1c' }}>{inadimplentes}</span>
+                <span className="dashboard-stat-label">Inadimplentes</span>
               </div>
             </div>
           </div>
