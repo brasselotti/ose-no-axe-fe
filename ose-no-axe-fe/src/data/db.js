@@ -69,6 +69,12 @@ export function buscarMensalidadesPorMembro(login) {
   return (getDB().mensalidades ?? []).filter(m => m.membroLogin === login)
 }
 
+export function deletarUsuario(login) {
+  const db = getDB()
+  db.usuarios = db.usuarios.filter(u => u.login !== login)
+  saveDB(db)
+}
+
 export function initDB() {
   const db = getDB()
   if (db.usuarios.length === 0) {
