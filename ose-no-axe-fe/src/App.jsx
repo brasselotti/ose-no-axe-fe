@@ -30,6 +30,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/cadastro" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/app" element={<ProtectedRoute />}>
