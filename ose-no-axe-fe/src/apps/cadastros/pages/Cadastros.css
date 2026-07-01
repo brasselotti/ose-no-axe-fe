@@ -1,0 +1,178 @@
+/* Busca */
+.filhos-busca {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  padding: 0.625rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.filhos-busca:focus {
+  outline: none;
+  border-color: var(--color-green-medium);
+}
+
+/* Grid de cards */
+.filhos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .filhos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .filhos-grid { grid-template-columns: 1fr; }
+}
+
+/* Card */
+.filho-card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Header do card */
+.filho-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.filho-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.filho-avatar svg {
+  width: 26px;
+  height: 26px;
+}
+
+.filho-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.filho-nome {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filho-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Divisória */
+.filho-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 0;
+}
+
+/* Detalhes (telefone, cidade) */
+.filho-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.filho-detalhe {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.filho-detalhe-icon {
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.filho-detalhe-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Tags / badges */
+.filho-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.badge--iniciado {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+.badge--nao-iniciado {
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+/* Footer do card */
+.filho-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f0f0;
+  margin-top: auto;
+}
+
+.filho-login {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.btn-editar {
+  padding: 0.35rem 0.875rem;
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-editar:hover {
+  background-color: var(--color-brown);
+}

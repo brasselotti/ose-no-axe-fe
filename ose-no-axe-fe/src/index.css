@@ -1,0 +1,12 @@
+@import './reset.css';
+
+:root {
+  --color-green-dark: #2C5F3F;
+  --color-green-medium: #4A7C5E;
+  --color-terracotta: #C4784A;
+  --color-brown: #8B5E3C;
+  --color-cream: #F5EFE6;
+  --color-white: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+}
