@@ -2,7 +2,7 @@ const DB_KEY = 'ose-no-axe-db'
 
 function getDB() {
   const data = localStorage.getItem(DB_KEY)
-  return data ? JSON.parse(data) : { usuarios: [] }
+  return data ? JSON.parse(data) : { usuarios: [], mensalidades: [] }
 }
 
 function saveDB(data) {
@@ -42,6 +42,31 @@ export function atualizarUsuario(login, dados) {
   db.usuarios[idx] = { ...db.usuarios[idx], ...dados }
   saveDB(db)
   return true
+}
+
+export function listarMensalidades() {
+  return getDB().mensalidades ?? []
+}
+
+export function salvarMensalidade(mensalidade) {
+  const db = getDB()
+  if (!db.mensalidades) db.mensalidades = []
+  db.mensalidades.push(mensalidade)
+  saveDB(db)
+}
+
+export function atualizarMensalidade(id, dados) {
+  const db = getDB()
+  if (!db.mensalidades) db.mensalidades = []
+  const idx = db.mensalidades.findIndex(m => m.id === id)
+  if (idx === -1) return false
+  db.mensalidades[idx] = { ...db.mensalidades[idx], ...dados }
+  saveDB(db)
+  return true
+}
+
+export function buscarMensalidadesPorMembro(login) {
+  return (getDB().mensalidades ?? []).filter(m => m.membroLogin === login)
 }
 
 export function initDB() {
