@@ -158,3 +158,17 @@ Os dados serão obtidos de forma presencial, no próprio terreiro, os mesmos ser
   - Implementação do dashboard na homepage (atalhos e visão geral);  
   - Implementação do app de cadastros: listagem de membros, novo cadastro e edição de cadastro (MUST-02, MUST-06);  
 ---
+30/06/2026
+- Dia 2 (app de mensalidades e melhorias no app de cadastros):
+  - Adição de funções CRUD de mensalidades ao banco de dados;
+  - Adição de classes globais de UI (form-section, badges, nav-cards);
+  - Implementação da página de Perfil com auto-edição de dados acessível pela Navbar (MUST-02);
+  - Implementação do app de mensalidades:
+    - Página inicial com navegação adaptada por tipo de perfil;
+    - Registro de pagamento de mensalidade (MUST-03);
+    - Analisar pagamentos: aprovação e rejeição de solicitações (MUST-05);
+    - Regularidade: dashboard de adimplência e tabela por membro/mês (MUST-04);
+    - Histórico individual de pagamentos por membro;
+---
+01/07/2026
+- Utilização de Claude Code para organizar commits do dia anterior;
